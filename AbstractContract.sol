@@ -5,7 +5,7 @@ pragma solidity ^0.8.4;
 abstract contract Base{
     string public name = "Base";
 
-    //为实现的函数需要加上virtual关键字
+    //未实现的函数需要加上virtual关键字
     function doLog() public pure virtual returns(string memory);
 }
 
