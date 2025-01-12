@@ -11,3 +11,4 @@ artifacts
 **artifacts**
 .deps
 .states
+.prettierrc.json
