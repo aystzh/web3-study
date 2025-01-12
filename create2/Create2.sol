@@ -21,18 +21,11 @@ contract Pair {
 
 }
 
-contract PairFactory {
-    mapping(address => mapping (address => address)) public getPair;
+
+contract  PairFactory2{
+    mapping (address=>mapping (address=>address)) public getPair;
+
     address[] public allPairs;
 
-    function createPair(address tokenA,address tokenB) external returns(address pairAddr){
-        //创建新合约
-        Pair pair =   new Pair();
-        //调用新合约的initlizer函数
-        pair.initlizer(tokenA, tokenB);
-        pairAddr = address(pair);
-        allPairs.push(pairAddr);
-        getPair[tokenA][tokenB] =pairAddr;
-        getPair[tokenB][tokenA]=pairAddr;
-    }   
+    
 }
